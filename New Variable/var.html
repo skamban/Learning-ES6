@@ -1,0 +1,39 @@
+ <html>
+ <title>This is title</title>
+ <head>
+ </head>
+ <body>
+
+ <script>
+// var - function scope
+//let/constant - block scope
+// const - cannot be updated, let - can be updated
+
+     var val = "hai";
+    //  console.log(val);
+     val="hello"; //only available inside the funstion they are created in 
+    //  console.log(val);
+
+    //Scope
+     function setVal(){
+         var thisVal = "300cm";
+         console.log(thisVal);
+         console.log(val);
+     }
+
+     setVal();
+         console.log(val);
+
+     var sqval = 22;
+     if(sqval > 2){
+         var total = sqval * 2;
+         console.log(total); // this will be leaked out of the block 
+         let  totalValue = sqval * 2;
+         console.log(totalValue); //  'let' - will not be leaked.
+
+     }
+
+ </script>
+
+</body>
+ </html>

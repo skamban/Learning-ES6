@@ -1,0 +1,89 @@
+-- var --
+var is he global variable and will be stored as a copy for each value that is updated
+
+var val = 100 
+{ -- var is not limited to block 
+    var val = 389
+}
+
+con.log(val) // returns 389
+
+var val = 100 
+{ -- var is not limited to block 
+     val = 389
+}
+
+con.log(val) // returns 389
+
+SCOPE: The value that is under the function scope/block , wont be globally captured 
+unless the function is called
+var val = 23
+function test (){
+    val = 11
+    coneols.log(val);
+}
+// val  -- will be 23 
+-- now the fun called 
+test ()
+now the val is 11 globally 
+SET TIME :
+when we set time " var " waits 
+and overrides the value
+
+
+-- let --
+let makes a reference  for the value assigned. 
+
+SCOPE:
+let val = 100  -- ref  to diff add
+{
+    let val = 334 -- ref  to diff address
+}
+
+let val = 23
+{
+    val = 45 -- ref to same address 
+}
+
+SET TIME :
+when we set time " let " waits an creates adress for each value 
+
+
+
+
+--const--
+
+
+cannot be assighed to any vaulue once assigned 
+
+but the value of the properties of the const  can be overriden 
+
+const val ={name : "sruthi"
+, add: "12y3"}
+val = "asdasd" -- not possible
+
+val.name = "YYY"
+
+the value of the name attribute will be chnaged 
+
+
+
+
+
+--temporal dead zone
+the value of "var" will be undefined when it is called before it is initialised
+the value of "let" will error out when called before initialised. 
+
+
+
+-- Usage of let, var, const in ES 6 
+url : https://mathiasbynens.be/notes/javascript-identifiers-es6
+CONST :
+- only if u dont need to reassign the value
+-use const by default
+LET:
+- when u need to localise variable in smaller scopes
+-only use let if rebinding is needed (only if value updation is needed)
+VAR:
+- top level variables that are shares accross many / larger scopes
+-(var shouldn’t be used in ES6)

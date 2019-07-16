@@ -1,0 +1,40 @@
+<html>
+    <title>Let</title>
+    <head>
+    </head>
+    <body>
+       
+
+    </body>
+</html>
+    <script>
+        // global scope - leaked
+        const name= 'name';
+        
+        for (var i=0; i < 10 ; i++){
+            console.log(i);
+            setTimeout(function(){
+                console.log("The number after a second is "+ i)
+            }, 1000)
+        }
+
+        //IIFE - function runs immediately and creates a scope so nothing will be leaked to parent scope
+    // function         
+    {
+        const name= 'wes';
+        console.log(name)
+// To make the value to be captured each time we use let
+        for (let i=0; i < 10 ; i++){
+            console.log(i);
+            setTimeout(function(){
+                console.log("After using Let kw, The number after a second is "+ i)
+            }, 1000)
+        }
+
+
+        }
+
+
+
+    </script>
+       

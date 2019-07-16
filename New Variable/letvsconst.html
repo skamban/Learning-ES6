@@ -1,0 +1,67 @@
+<html>
+    <title>this is title</title>
+    <head>
+    </head>
+    <body>
+       
+
+    </body>
+</html>
+<script>
+    //--------let variable -------
+        let myVal = "100";
+        console.log(myVal);
+        // let myVal = "400"; // will error 
+        // console.log(myVal);
+
+         myVal = "400"; 
+         console.log(myVal); //pass
+
+
+
+        
+        //let is block scoped
+         //scope -- perference to window scope-- scoped to block
+         let width= false;
+         if(!width){
+            let width = true;
+             console.log(width) // true -- if we put this in console it ill be false because scoped to window
+         }
+
+         //----- Const variable -----
+
+         const key = '12312341234';
+          console.log(key);
+
+          //key = '3123123'; // errors out
+
+          const details = {
+              id : 123
+              , test : true
+          }
+
+          console.log(details)
+
+          //properties can be changed, but not the variable(details) it self
+        //   details = ""; // errors
+          details.test = false;
+          console.log(details) // false
+
+          //if you want to freeze the properties 
+
+          const roll= Object.freeze(details);
+
+          roll.test = 'werwrwe'; // fail
+          console.log(roll)
+          
+
+
+
+
+
+
+
+
+        </script>
+           
+       
