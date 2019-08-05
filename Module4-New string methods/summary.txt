@@ -1,0 +1,6 @@
+- string methods: 
+    .startsWith()
+    .endsWith()
+    .includes()
+    .replace()
+    - value of these methods are case sensitive
