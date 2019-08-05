@@ -1,0 +1,29 @@
+- Template strings
+const personDetails = {
+                Id : 'ITS200',
+                Mark : 100,
+                Rank : 1
+            }
+            ${personDetails.Id}
+
+- creating html fragments using template strings
+        - using function inside template strings. 
+        - .foreach();
+- Tagged template literals 
+            - using function -- functionName(strings, ..values)
+- Tagged template dictionary - see if there is a value in dicitonary and do things accordingly 
+   - Using abbrevations : 
+     let dictionary = {
+        HTML : 'Hyper text mark up'
+        , JS : 'Javascript'
+        , CSS : 'Cascading style sheet'
+    }
+            let val = ${dictionary.HTML}
+
+            console.log( ${dictionary[values]})
+
+
+- Sanitize HTML  : 
+using the script to sanitize
+
+

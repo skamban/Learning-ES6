@@ -1,0 +1,32 @@
+<html>
+    <title></title>
+    <head>
+    </head>
+    <body>
+       
+
+    </body>
+</html>
+    <script>
+
+        const breed  = "Lab"; 
+        const pets = ["scoob", "tucker", "tyson"];
+// o/p should be 
+// {
+//     owner: 'john'
+//     place : 1
+//     breed : breed
+// }
+//implicit return of an object variable
+const win = pets.map((pet, i) => 
+    ({name: pet, breed, rank: i+1}) );
+        console.log(win)
+
+const ages = ["23", "34", "43", "23"];
+
+const oldMap = ages.map(age => age> 30 );
+const oldFilter = ages.filter(age => age> 30 );
+console.log(oldFilter)
+        
+    </script>
+       

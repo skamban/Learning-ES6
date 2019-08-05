@@ -1,0 +1,18 @@
+
+-- Arrow function  
+    - map , filter 
+    - this , scoping this (when to use arrow function and function selector)
+    - how to switch values
+
+  --Default Variable 
+    - pass default values in function
+    - handle undefined values  
+
+-- When not to use arrow functions
+        - then there is not a paraent defined already 
+        - Use of classes
+        - Use of (arguments) in function 
+
+-- If we do not need 'this' in the function , we can use ()=> Arrow function in that point
+
+

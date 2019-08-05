@@ -1,0 +1,33 @@
+<html>
+    <title></title>
+    <head>
+    </head>
+    <body>
+       
+
+    </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
+<script>
+ function sanitize(strings, ...values){
+const theHTML = strings.reduce((prev,current, i ) => `${prev} ${current} ${values[i] || ''}`
+, '');
+
+return DOMPurify.sanitize(theHTML);
+
+ }
+ 
+ const first = 'Wes';
+  const aboutMe = `I love to do evil <img src="http://unsplash.it/100/100?random" onload="alert('you got hacked');" />`;
+
+  const html = sanitize `My name is ${first}
+  and the sentence is : ${aboutMe}`
+
+  console.log(html);
+
+
+</script>
+       
+
+
+

@@ -1,0 +1,56 @@
+<html>
+    <title></title>
+    <head>
+    </head>
+    <body>
+       
+
+    </body>
+</html>
+    <script>
+        //Anonymous function 
+        //consise
+        // wont rebind
+
+        const names = ['Jon', 'Won', 'Kon']
+        const lastname = 'Ton';
+        // var
+
+        //orginal 
+
+        const fullName = names.map(function(n){
+            return `${n } ${lastname}`
+        });
+
+        console.log(fullName);
+
+        const fullName2 = names.map((n) => {
+            return `${n} ${lastname}`
+        });
+
+        console.log(fullName2);
+
+
+        const fullName3 = names.map(n => {
+            return `${n} ${lastname}`
+        });
+
+        console.log(fullName3);
+
+        //implicit return
+        const fullName4 = names.map(n => `${n} ${lastname}`);
+
+        console.log(fullName4);
+
+        // Anonymous function sample 
+
+        var nameList =(name) => console.log(name);
+        var unknown =() => console.log('unknown Name');
+        
+        nameList("sruthi")
+        unknown();
+
+
+
+    </script>
+       

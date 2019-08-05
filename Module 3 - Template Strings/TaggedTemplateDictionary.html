@@ -1,0 +1,50 @@
+<html>
+    <title></title>
+    <head>
+    </head>
+    <body>
+       <div class="bio">
+
+       </div>
+
+    </body>
+</html>
+    <script>
+
+    let dictionary = {
+        HTML : 'Hyper text mark up'
+        , JS : 'Javascript'
+        , CSS : 'Cascading style sheet'
+    }
+let str =''
+    function AddAbbrevation(strings, ...values){
+        strings.forEach(element => {
+        let val = ''
+        if(dictionary[values]){
+            val =  `<li class='${dictionary[values]}'>${values} </li>`
+        }else{
+            val = `<li>${values} </li>`
+        }
+
+
+           str += element + val
+           
+        });
+        return str;
+
+    }
+    const name1 = 'sruthi'
+    const name2='kamban'
+
+    let text = AddAbbrevation `My name is ${name1} ${name2}
+    and I know these languages
+    <li>${dictionary.HTML}</li>`
+
+    console.log(text)
+    const bio = document.querySelector('.bio')
+    const p = document.createElement('p');
+    p.innerHTML = text;
+    bio.appendChild(p);
+
+    </script>
+       

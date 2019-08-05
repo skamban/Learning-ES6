@@ -19,7 +19,7 @@ const inventors = [
   { first: 'Max', last: 'Planck', year: 1858 },
 ];
 
-/*
+/* 
   Beers
 */
 const beers = [

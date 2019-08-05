@@ -1,0 +1,49 @@
+<html>
+    <title></title>
+    <head> Create HTML fragments
+    </head>
+    <body>
+            
+
+
+        <script>
+            const personDetails = {
+                Id : 'ITS200',
+                Mark : 100,
+                Rank : 1
+            }
+            //  const markuconsole.table(object);
+
+            const markup = `
+            <div class="personDetails">
+                <h2>${personDetails.Id}</h2>
+                <h2>${personDetails.Mark}</h2>
+                <h2>${personDetails.Rank}</h2>
+            </div> `
+                
+
+                const dogs = [
+                    {name:'Scooby', age: 2, className :'colorPink'},
+                    {name:'tucker', age: 4, className :'colorYellow'},
+                    {name:'Maya', age: 6, className :'colorPink'},
+                ];
+                const text = `
+                <ul class="myDogs">
+                    ${dogs.map(dog => 
+                    `<li class='${dog.className}'> Dog's Name :${dog.name} Dog's Age : ${dog.age}</li>`)
+                    .join('')}
+                </ul>
+                
+                `;
+                document.body.innerHTML = text;
+                document.querySelector('li.colorPink').backgroud = 'pink'
+                console.log(text);
+
+
+                
+        </script>
+
+    </body>
+</html>
+    
+       

@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+            <title></title>
+    <style>
+    .hl{
+        background : #ff0000;
+    }
+    </style>
+    </head>
+    <body>
+       
+
+    </body>
+</html>
+    <script>
+ let dog = {
+            name : 'scooby',
+            age : 2 
+        }
+        function color(strings, ...values ){
+            let str=''
+            console.log(strings)
+            console.log(values)
+            strings.forEach((string, i) => { 
+            console.log(i)
+                // str +=   string + (values[i] || '')
+                str +=   `${string}  <span class='hl'>${values[i] || ''}</span> `
+                
+            });
+            return str
+
+        }
+        let sentence = color `My dog's name is ${dog.name} and its age is ${dog.age * 7}`;
+
+        document.body.innerHTML = sentence;
+   
+   
+        console.log(sentence)
+   </script>
+       
