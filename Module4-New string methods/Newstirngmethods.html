@@ -8,14 +8,15 @@
     </body>
 </html>
     <script>
-        let val = 'THIS is a string'
+        const n = 10;
+        const val = `this will be repeated ${n} times`
 
         // .startsWith()`
         // .endsWith()
         // .includes()
-        // .replace()
+        // .repeat()
 
-       val =  val.replace('string', 'CONSTANT string');
+        val.replace(val, n)
         console.log(val)
     </script>
        

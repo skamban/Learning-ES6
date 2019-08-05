@@ -2,5 +2,5 @@
     .startsWith()
     .endsWith()
     .includes()
-    .replace()
+    .repeat()
     - value of these methods are case sensitive
