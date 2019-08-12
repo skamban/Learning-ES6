@@ -1,0 +1,28 @@
+- destructing object 
+    to get an array 
+     - const {properties} = arrayVariable
+- Retriving nested objects 
+    const test = var.loop1Name.loop2Name
+    or 
+    const{property1, property2 } = var.loop1.loop2
+- Default values for properties : 
+if there is no prop named prop2 , then it pics default value
+const{prop1= defval, prop2=defval} = var
+if we want to chnage the value of the property2
+const{prop1 = defval, prop2 = defval2} = {prop2: 590}
+
+- Renaming properties
+const{p1 :prop1 = defval, p2: prop2 = defval2} = {p2: 590}
+
+- Destructing Array : 
+const[player1, player2, ...players] = teams 
+ -- ..players denotes  other players in the array 
+
+ - swapping variables
+ [var1, va2 ] = [var2, var1]
+ 
+- multiple returns ; 
+can be carried over when we return an object in a funciton 
+
+- defaults : 
+we can default the vlaues for the properties (we did this earlier)
