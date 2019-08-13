@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Symbols</title>
+</head>
+
+<body>
+    <script>
+        const wes = Symbol('test');
+        const person = Symbol('test');
+
+        ///wes wont be equal to person becos symbols are unique
+
+        const classRoom = {
+            [Symbol('Mark')]: { grade: 50, gender: 'male' },
+            [Symbol('olivia')]: { grade: 80, gender: 'female' },
+            [Symbol('olivia')]: { grade: 80, gender: 'female' },
+        };
+
+        // cannot loop symbols 
+        for (const person in classRoom) {
+            console.log(person);
+        }
+
+        const syms = Object.getOwnPropertySymbols(classRoom);
+        const data = syms.map(sym => classRoom[sym]);// this is because we need to get the object type classroom
+        console.log(data);
+
+    </script>
+</body>
+
+</html>

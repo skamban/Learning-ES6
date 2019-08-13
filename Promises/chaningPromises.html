@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chaining Promises</title>
+</head>
+
+<body>
+    <script>
+        //consider this like db
+        const posts = [
+            { title: 'I love JavaScript', author: 'Wes Bos', id: 1 },
+            { title: 'CSS!', author: 'Chris Coyier', id: 2 },
+            { title: 'Dev tools tricks', author: 'Addy Osmani', id: 3 },
+        ];
+
+        const authors = [
+            { name: 'Wes Bos', twitter: '@wesbos', bio: 'Canadian Developer' },
+            { name: 'Chris Coyier', twitter: '@chriscoyier', bio: 'CSS Tricks and CodePen' },
+            { name: 'Addy Osmani', twitter: '@addyosmani', bio: 'Googler' },
+        ];
+        // find posts by id 
+        function getPostbyId(Id) {
+            //create promise
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const post = posts.find(p => p.id === Id);
+                    if (post) {
+                        resolve(post)
+                    } else {
+                        reject(Error("there is a error"))
+                    }
+                }, 200);
+            });
+        }
+
+
+        //hydrate tthe posts whith authors
+        function hydratePost(post) {
+            return new Promise((resolve, reject) => {
+                const authordetails = authors.filter(author => author.name === post.author)
+                if (authordetails) {
+                    post.author = authordetails;
+                    resolve(post)
+
+                } else {
+                    reject(Error("this is err message"))
+                }
+            });
+        }
+
+        //chain it
+        getPostbyId(3)
+            .then(post => hydratePost(post))
+            .then(post => console.log(post))
+            .catch(err => console.err("this is err message"))
+    </script>
+</body>
+
+</html>
